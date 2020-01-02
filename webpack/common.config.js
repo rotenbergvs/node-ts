@@ -1,5 +1,4 @@
 const path = require('path');
-const NodemonPlugin = require('nodemon-webpack-plugin');
 
 module.exports = {
     entry: './src/index.ts',
@@ -17,13 +16,7 @@ module.exports = {
     },
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, '../dist')
     },
-    optimization: {
-        minimize: true
-    },
-    plugins: [
-        new NodemonPlugin(), // Dong
-    ],
     target: 'node'
 };
